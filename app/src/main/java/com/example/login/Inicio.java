@@ -31,6 +31,10 @@ public class Inicio extends AppCompatActivity {
     TextInputEditText editext_correo;
     TextInputEditText editext_contraseña;
 
+    //shared
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +44,11 @@ public class Inicio extends AppCompatActivity {
         editext_contraseña = findViewById(R.id.textInputEditText002);
         registrarse = findViewById(R.id.textView004);
         inicio = findViewById(R.id.button001);
+
+        //shared
+        preferences = getSharedPreferences("sesiones", Context.MODE_PRIVATE);
+        editor = preferences.edit();
+
         registrarse.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(Inicio.this, Registro.class));
@@ -62,10 +71,20 @@ public class Inicio extends AppCompatActivity {
                     Toast toast = Toast.makeText(Inicio.this, "Ingrese un correo", Toast.LENGTH_SHORT);
                     toast.show();
                 }
-
             }
         });
     }
+
+    private void guardarSesion(String usuario, String correo, String fecha, String pais) {
+        editor.putBoolean("sesion", true);
+        editor.putString("usuario",usuario);
+        editor.putString("correo",correo);
+        editor.putString("fecha",fecha);
+        editor.putString("pais",pais);
+
+        editor.apply();
+    }
+
 
     private void login(String correo, String contraseña) {
 
@@ -87,17 +106,11 @@ public class Inicio extends AppCompatActivity {
                         String fecha = jsonObject.getString("fecha");
                         String pais = jsonObject.getString("pais");
 
-                        SharedPreferences sharedPref = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPref.edit();
-                        editor.putString("usuario", usuario);
-                        editor.putString("correo", correo);
-                        editor.putString("contraseña", contraseña);
-                        editor.putString("fecha", fecha);
-                        editor.putString("pais", pais);
-                        editor.apply();
-                        //editor.commit();
+                        //shared
+                        guardarSesion(usuario,correo, fecha, pais);
 
                         startActivity(new Intent(Inicio.this, Workers.class));
+
                     } else {
                         String mensaje = jsonObject.getString("mensaje");
                         Toast toast = Toast.makeText(Inicio.this, mensaje, Toast.LENGTH_SHORT);
