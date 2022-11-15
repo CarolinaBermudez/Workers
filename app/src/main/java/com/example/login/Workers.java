@@ -1,8 +1,12 @@
 package com.example.login;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -21,6 +25,9 @@ public class Workers extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityWorkersBinding binding;
 
+    Button boton_cerrar;
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +35,18 @@ public class Workers extends AppCompatActivity {
         binding = ActivityWorkersBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //shared
+        preferences = getSharedPreferences("sesiones", Context.MODE_PRIVATE);
+        editor = preferences.edit();
+        boton_cerrar = findViewById(R.id.button2);
+        boton_cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editor.putBoolean("sesion", false);
+                editor.apply();
+                startActivity(new Intent(Workers.this, MainActivity.class));
+            }
+        });
         setSupportActionBar(binding.appBarWorkers.toolbar);
         binding.appBarWorkers.fab.setOnClickListener(new View.OnClickListener() {
             @Override

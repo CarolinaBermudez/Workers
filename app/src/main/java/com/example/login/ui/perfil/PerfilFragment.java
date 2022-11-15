@@ -31,7 +31,7 @@ public class PerfilFragment extends Fragment{
 
         //perfilViewModel.getText().observe(getViewLifecycleOwner(), textView_usuario::setText);
 
-        SharedPreferences sharedPref = getActivity().getSharedPreferences("Preferences", 0);
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("sesiones", 0);
         String usuario = sharedPref.getString("usuario", "");
         String correo = sharedPref.getString("correo", "");
         String fecha = sharedPref.getString("fecha", "");
