@@ -62,6 +62,7 @@ public class Inicio extends AppCompatActivity {
                     Toast toast = Toast.makeText(Inicio.this, "Ingrese un correo", Toast.LENGTH_SHORT);
                     toast.show();
                 }
+
             }
         });
     }
@@ -95,7 +96,6 @@ public class Inicio extends AppCompatActivity {
                         editor.putString("pais", pais);
                         editor.apply();
                         //editor.commit();
-
 
                         startActivity(new Intent(Inicio.this, Workers.class));
                     } else {
