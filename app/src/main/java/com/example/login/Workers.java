@@ -48,6 +48,7 @@ public class Workers extends AppCompatActivity {
             }
         });
         setSupportActionBar(binding.appBarWorkers.toolbar);
+        /*
         binding.appBarWorkers.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,12 +56,26 @@ public class Workers extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        */
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+        String niv = preferences.getString("nivel","normi");
+        Menu nav_Menu = navigationView.getMenu();
+
+        if(niv.equals("admin")){
+            nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
+        }else{
+            nav_Menu.findItem(R.id.nav_slideshow).setVisible(false);
+            nav_Menu.findItem(R.id.nav_admin).setVisible(false);
+            nav_Menu.findItem(R.id.nav_eliminar).setVisible(false);
+            nav_Menu.findItem(R.id.nav_editar).setVisible(false);
+        }
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.nav_perfil)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,R.id.nav_perfil, R.id.nav_admin, R.id.nav_editar, R.id.nav_eliminar)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_workers);

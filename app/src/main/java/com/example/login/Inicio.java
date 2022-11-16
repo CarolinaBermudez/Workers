@@ -75,12 +75,13 @@ public class Inicio extends AppCompatActivity {
         });
     }
 
-    private void guardarSesion(String usuario, String correo, String fecha, String pais) {
+    private void guardarSesion(String usuario, String correo, String fecha, String pais, String nivel) {
         editor.putBoolean("sesion", true);
         editor.putString("usuario",usuario);
         editor.putString("correo",correo);
         editor.putString("fecha",fecha);
         editor.putString("pais",pais);
+        editor.putString("nivel",nivel);
 
         editor.apply();
     }
@@ -105,9 +106,11 @@ public class Inicio extends AppCompatActivity {
                         String contraseña = jsonObject.getString("contraseña");
                         String fecha = jsonObject.getString("fecha");
                         String pais = jsonObject.getString("pais");
+                        String nivel = jsonObject.getString("nivel");
+
 
                         //shared
-                        guardarSesion(usuario,correo, fecha, pais);
+                        guardarSesion(usuario,correo, fecha, pais, nivel);
 
                         startActivity(new Intent(Inicio.this, Workers.class));
 

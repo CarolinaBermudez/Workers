@@ -256,6 +256,7 @@ public class Registro extends AppCompatActivity {
                 params.put("fecha", fecha);
                 params.put("pais", paises);
                 params.put("request", "registrar");
+                params.put("nivel", "normi");
                 return params;
             }
         };
