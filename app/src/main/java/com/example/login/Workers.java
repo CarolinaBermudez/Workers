@@ -1,8 +1,10 @@
 package com.example.login;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.core.app.ActivityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -21,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.login.databinding.ActivityWorkersBinding;
 
 public class Workers extends AppCompatActivity {
+    private int MY_PERMISSIONS_REQUEST;
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityWorkersBinding binding;
