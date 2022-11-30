@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -22,6 +23,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.login.databinding.ActivityWorkersBinding;
+import com.squareup.picasso.Picasso;
 
 public class Workers extends AppCompatActivity {
     private int MY_PERMISSIONS_REQUEST;
@@ -75,7 +77,21 @@ public class Workers extends AppCompatActivity {
             nav_Menu.findItem(R.id.nav_eliminar).setVisible(false);
             nav_Menu.findItem(R.id.nav_editar).setVisible(false);
         }
+        /*
+        String conImagen = preferences.getString("conImagen","true");
+        if (conImagen.equals("true")){
+            String linkImagen = preferences.getString("linkImagen","https://firebasestorage.googleapis.com/v0/b/workers-a4c5f.appspot.com/o/ImagenesPerfil%2Fperfil.png?alt=media&token=802302ba-18eb-4ce3-a295-a5459d89995c");
+            ImageView imageView;
+            imageView = (ImageView) nav_Menu.findItem(R.id.imageView);
+            Picasso.get()
+                    .load(linkImagen)
+                    .placeholder(R.drawable.perfil)
+                    .error(R.drawable.perfil)
+                    .into(imageView)
+            ;
+        }
 
+         */
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
