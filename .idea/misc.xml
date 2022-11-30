@@ -7,6 +7,9 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.202" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_launcher_background.xml" value="0.202" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2555" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/roundbutton_selector.xml" value="0.2435" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/roundcorner_down.xml" value="0.2435" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/roundcorner_up.xml" value="0.2435" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/side_nav_bar.xml" value="0.2545" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/font/.xml" value="0.28020833333333334" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/font/font.xml" value="0.23001282599401454" />
@@ -23,7 +26,7 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/fragment_home.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/fragment_logout.xml" value="0.20521590423257802" />
-        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/fragment_perfil.xml" value="0.264" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/fragment_perfil.xml" value="0.152" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/fragment_slideshow.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/list_item.xml" value="0.20436083796494228" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/nav_header_workers.xml" value="0.2" />

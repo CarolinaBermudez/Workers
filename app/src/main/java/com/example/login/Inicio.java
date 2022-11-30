@@ -1,5 +1,6 @@
 package com.example.login;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -18,10 +19,16 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,7 +41,9 @@ public class Inicio extends AppCompatActivity {
     //shared
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-
+    //DatabaseReference databaseReference;
+    String conImagen;
+    String linkImagen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +57,7 @@ public class Inicio extends AppCompatActivity {
         //shared
         preferences = getSharedPreferences("sesiones", Context.MODE_PRIVATE);
         editor = preferences.edit();
+        //databaseReference = FirebaseDatabase.getInstance().getReference();
 
         registrarse.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -82,6 +92,8 @@ public class Inicio extends AppCompatActivity {
         editor.putString("fecha",fecha);
         editor.putString("pais",pais);
         editor.putString("nivel",nivel);
+       // editor.putString("conImagen",conImagen);
+        //editor.putString("linkImagen",linkImagen);
 
         editor.apply();
     }
@@ -107,8 +119,31 @@ public class Inicio extends AppCompatActivity {
                         String fecha = jsonObject.getString("fecha");
                         String pais = jsonObject.getString("pais");
                         String nivel = jsonObject.getString("nivel");
+/*
+                        databaseReference.child(usuario).addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                if (snapshot.exists()) {
+                                    //Se obtienen los datos de firebase
+                                    //ArrayList clasificación = new ArrayList();
+                                    //long clasificaciónTamaño = snapshot.child("clasificación").getChildrenCount();
 
+                                    if (snapshot.child("conImagen").exists()){
+                                        conImagen = snapshot.child("conImagen").getValue().toString();
 
+                                    }else{
+                                        conImagen = "false";
+                                    }
+
+                                    //linkImagen = snapshot.child("linkImagen").getValue().toString();
+
+                                }
+                            }
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                            }
+                        });
+*/
                         //shared
                         guardarSesion(usuario,correo, fecha, pais, nivel);
 
