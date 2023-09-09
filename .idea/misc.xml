@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/dell/.gradle/caches/transforms-3/bfec8dfcaf6c34e166a516bbd7a3f400/transformed/material-1.6.1/res/layout/test_exposed_dropdown_menu.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.202" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_baseline_admin_panel_settings_24.xml" value="0.1975" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1975" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.1975" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_baseline_person_pin_circle_24.xml" value="0.1975" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_launcher_background.xml" value="0.202" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_login.xml" value="0.1975" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1975" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2555" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/ic_perfil.xml" value="0.1975" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/roundbutton_selector.xml" value="0.2435" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/roundcorner_down.xml" value="0.2435" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/drawable/roundcorner_up.xml" value="0.2435" />
@@ -32,11 +38,13 @@
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/layout/nav_header_workers.xml" value="0.2" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/menu/activity_main_drawer.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/menu/workers.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/mipmap-anydpi-v26/icono.xml" value="0.1975" />
+        <entry key="..\:/Users/dell/AndroidStudioProjects/login/app/src/main/res/mipmap-anydpi-v26/icono_round.xml" value="0.1975" />
         <entry key="..\:/Users/dell/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.20521590423257802" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
